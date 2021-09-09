@@ -42,6 +42,8 @@ macro(set_up_compilers)
   # Fortran compiler flags.
   #
   if (CMAKE_Fortran_COMPILER_ID STREQUAL "GNU")
+    message("CMAKE_Fortran_COMPILER_ID ${CMAKE_Fortran_COMPILER_ID}")
+#    set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -W -fallow-argument-mismatch -W -Wall -std=gnu -pedantic")
     set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -W -Wall -std=gnu -pedantic")
     set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -DCPRGNU")
     set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -Wno-unused-variable")
